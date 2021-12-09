@@ -10,5 +10,8 @@ import java.util.List;
 
 public class ProductViewModule extends ViewModel {
     private MutableLiveData<List<ItemsItem>> mListItems;
+    public ProductViewModule(){
+        this.mListItems=new MutableLiveData<>();
+    }
 
 }
