@@ -1,8 +1,6 @@
 package com.example.tiki.module.service;
 
-import com.example.tiki.view.viewmau.view2.Response;
-
-import java.util.List;
+import com.example.tiki.module.entity.Response;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

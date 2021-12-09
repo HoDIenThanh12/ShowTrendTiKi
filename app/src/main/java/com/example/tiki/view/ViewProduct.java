@@ -21,6 +21,8 @@ public class ViewProduct extends AppCompatActivity {
     private final String TAG=getClass().getSimpleName();
     ListView list;
     TextView tview;
+
+    //private Adap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,45 +31,50 @@ public class ViewProduct extends AppCompatActivity {
         tview=findViewById(R.id.tv);
         getData();
     }
-    private void getData(){
-        Call<com.example.tiki.view.viewmau.view2.Response> call = RetrofitProduct.getInstance().getApiProduct()
-                .getCategory(0,20);
-        call.enqueue(new Callback<Response>() {
-            @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
-                Log.d(TAG,"sussces---->");
+    private  void getData() {
 
-                Response r =response.body();
-                List<ItemsItem> lsItem = r.getData().getMetaData().getListItems();
-                Log.d(TAG,"ListItmes----> "+lsItem.get(0).getTitle());
-                Log.d(TAG,"Stastus----> "+r.getStatus());
-                Log.d(TAG,"type----> "+r.getData().getMetaData());
-                Log.d(TAG,"more_link_text----> "+r.getData().getMetaData().getMoreLinkText());
-                Log.d(TAG,"more_linh----> "+r.getData().getMetaData().getMoreLink());
-            }
+    }
 
-            @Override
-            public void onFailure(Call<Response> call, Throwable t) {
-                Log.d(TAG,"fail---->"+t);
-            }
-        });
-
-//                .enqueue(new Callback<AllData>() {
+//    private void getData(){
+//        Call<Response> call = RetrofitProduct.getInstance().getApiProduct()
+//                .getCategory(0,20);
+//        call.enqueue(new Callback<Response>() {
 //            @Override
-//            public void onResponse(Call<AllData> call, Response<AllData> response) {
-//                Toast.makeText(getApplicationContext(), "-----thành công", Toast.LENGTH_LONG).show();
-//                Log.d(TAG,"sussces---->"+response.toString());
-//                AllData allData = response.body();
-//                if(allData!=null ){
-//                    Log.d(TAG,"sussces---->");
-//                }
+//            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+//                Log.d(TAG,"sussces---->");
+//
+//                Response r =response.body();
+//                List<ItemsItem> lsItem = r.getData().getMetaData().getListItems();
+//                //lsItem.postValue();
+//                Log.d(TAG,"ListItmes----> "+lsItem.get(0).getTitle());
+//                Log.d(TAG,"Stastus----> "+r.getStatus());
+//                Log.d(TAG,"type----> "+r.getData().getMetaData());
+//                Log.d(TAG,"more_link_text----> "+r.getData().getMetaData().getMoreLinkText());
+//                Log.d(TAG,"more_linh----> "+r.getData().getMetaData().getMoreLink());
 //            }
 //
 //            @Override
-//            public void onFailure(Call<AllData> call, Throwable t) {
+//            public void onFailure(Call<Response> call, Throwable t) {
 //                Log.d(TAG,"fail---->"+t);
 //            }
 //        });
-
-    }
+//
+////                .enqueue(new Callback<AllData>() {
+////            @Override
+////            public void onResponse(Call<AllData> call, Response<AllData> response) {
+////                Toast.makeText(getApplicationContext(), "-----thành công", Toast.LENGTH_LONG).show();
+////                Log.d(TAG,"sussces---->"+response.toString());
+////                AllData allData = response.body();
+////                if(allData!=null ){
+////                    Log.d(TAG,"sussces---->");
+////                }
+////            }
+////
+////            @Override
+////            public void onFailure(Call<AllData> call, Throwable t) {
+////                Log.d(TAG,"fail---->"+t);
+////            }
+////        });
+//
+//    }
 }
