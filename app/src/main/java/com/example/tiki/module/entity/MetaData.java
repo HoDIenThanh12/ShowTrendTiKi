@@ -61,7 +61,7 @@ public class MetaData{
 		return moreLinkText;
 	}
 
-	public List<ItemsItem> getItems(){
+	public List<ItemsItem> getListItems(){
 		return items;
 	}
 }
