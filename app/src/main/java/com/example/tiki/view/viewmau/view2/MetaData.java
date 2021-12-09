@@ -3,6 +3,7 @@ package com.example.tiki.view.viewmau.view2;
 import com.example.tiki.module.entity.ItemsItem;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MetaData {
@@ -41,7 +42,7 @@ public class MetaData {
 
 
 	@SerializedName("items")
-	private List<ItemsItem> ListItems;
+	private ArrayList<ItemsItem> ListItems;
 
     public String getBackgroundImage(){
         return backgroundImage;
@@ -71,7 +72,7 @@ public class MetaData {
         return moreLinkText;
     }
 
-	public List<ItemsItem> getListItems(){
+	public ArrayList<ItemsItem> getListItems(){
 		return ListItems;
 	}
 }

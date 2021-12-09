@@ -15,6 +15,18 @@ public class ItemsItem{
 	@SerializedName("title")
 	private String title;
 
+	public void setImages(List<String> images) {
+		this.images = images;
+	}
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public List<String> getImages(){
 		return images;
 	}

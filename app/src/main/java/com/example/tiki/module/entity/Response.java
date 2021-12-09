@@ -17,4 +17,6 @@ public class Response{
 	public int getStatus(){
 		return status;
 	}
+
+
 }
