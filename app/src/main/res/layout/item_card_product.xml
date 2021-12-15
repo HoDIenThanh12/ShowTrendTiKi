@@ -4,43 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     app:cardCornerRadius="20dp"
-    android:backgroundTint="@color/cardview_shadow_start_color"
+    android:backgroundTint="@color/colorcard"
     android:layout_marginTop="20dp"
+
     android:layout_height="wrap_content"
     android:padding="20dp">
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_product"
+            android:layout_width="10dp"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/name_product"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            >
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_product"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        />
+            android:layout_marginLeft="0dp"
+            android:layout_toEndOf="@+id/image_product"
+            android:text="TextView"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            android:gravity="center"/>
 
-            <TextView
-                android:id="@+id/category_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="20dp"
-                android:layout_marginTop="25dp"
-                android:layout_toEndOf="@id/image_product"
-                android:text="TextView" />
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/img_Product"
+            android:layout_width="250dp"
+            android:layout_height="250dp" />
 
-            <TextView
-                android:id="@+id/name_product"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_marginLeft="20dp"
-                android:textSize="20dp"
-                android:layout_toRightOf="@+id/image_product"
-                android:text="TextView" />
-        </RelativeLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/category_id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="TextView"-->
+<!--            android:textSize="20dp" />-->
+
+
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>

@@ -5,26 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:backgroundTint="@color/yyy"
+    android:background="@color/yyy"
     tools:context=".view.ViewProduct">
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp">
+
         <TextView
             android:id="@+id/tv"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="74dp"
-            android:text="TextView" />
+            android:text="Xu hướng mua sắm TiKi" />
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_product"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/rcv_user"/>
+            android:layout_marginBottom="10dp" />
     </LinearLayout>
 
 </RelativeLayout>

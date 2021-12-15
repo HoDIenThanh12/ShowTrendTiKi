@@ -38,7 +38,7 @@ public class AdapperUser extends RecyclerView.Adapter<AdapperUser.AdapperUserVie
         User u =lUser.get(position);
         if(u==null)
             return;
-        holder.tv_caID.setText(u.get_category_id());
+        //holder.tv_caID.setText(u.get_category_id());
         holder.tv_nameP.setText(u.get_nameP());
         holder.img_p.setImageResource(u.get_image());
     }
@@ -60,7 +60,7 @@ public class AdapperUser extends RecyclerView.Adapter<AdapperUser.AdapperUserVie
         public AdapperUserViewHolder(@NonNull View itemView) {
             super(itemView);
             img_p = itemView.findViewById(R.id.image_product);
-            tv_caID = itemView.findViewById(R.id.category_id);
+            //tv_caID = itemView.findViewById(R.id.category_id);
             tv_nameP = itemView.findViewById(R.id.name_product);
         }
     }
